@@ -30,7 +30,7 @@ public class DashboardController {
 
         mav.addObject("activeDash", "active");
         mav.addObject("totalBooks", bookItemService.count());
-        mav.addObject("lentBooks", bookItemService.countByStatus(BookStatus.LOANED)); /*TODO change it later*/
+        mav.addObject("lentBooks", bookItemService.countByStatus(BookStatus.LOANED));
         mav.addObject("totalMembers", userService.count());
         mav.addObject("loggedMembers", sessionRegistry.getAllPrincipals().size());
         mav.setViewName("admin/dashboard");
