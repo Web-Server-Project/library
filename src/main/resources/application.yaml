@@ -1,0 +1,14 @@
+#Application configuration files
+
+application:
+
+spring :
+
+  mustache:
+    enabled: true
+    prefix: classpath:/templates/
+    request-context-attribute: requestContext
+    suffix: .html
+
+    mvc:
+      static-path-pattern: /resources/**

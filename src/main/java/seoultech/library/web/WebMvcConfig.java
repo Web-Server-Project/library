@@ -1,12 +1,14 @@
 package seoultech.library.web;
 
-
+import org.springframework.boot.autoconfigure.mustache.MustacheAutoConfiguration;
+import com.samskivert.mustache.Mustache;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.core.env.Environment;
 import org.springframework.web.servlet.config.annotation.EnableWebMvc;
 import org.springframework.web.servlet.config.annotation.ResourceHandlerRegistry;
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
+
 
 @EnableWebMvc
 @Configuration
@@ -21,6 +23,16 @@ public class WebMvcConfig implements WebMvcConfigurer {
         registry
                 .addResourceHandler("/resources/**")
                 .addResourceLocations(CLASSPATH_RESOURCE_LOCATIONS);
+    }
+    @Bean
+    public Mustache.Compiler mustacheCompiler(Mustache.TemplateLoader mustacheTemplateLoader, Environment environment) {
+//        MustacheAutoConfiguration collector = new MustacheAutoConfiguration();
+//        collector.setEnvironment(environment);
+        return Mustache.compiler()
+                .defaultValue("")
+                .withDelims("{* *")
+                .withLoader(mustacheTemplateLoader);
+
     }
 }
 
