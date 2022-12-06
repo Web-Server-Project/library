@@ -26,7 +26,7 @@ public class WebMvcConfig implements WebMvcConfigurer {
     }
     @Bean
     public Mustache.Compiler mustacheCompiler(Mustache.TemplateLoader mustacheTemplateLoader, Environment environment) {
-//        MustacheAutoConfiguration collector = new MustacheAutoConfiguration();
+//        MustacheEnvironmentCollector collector = new MustacheEnvironmentCollector();
 //        collector.setEnvironment(environment);
         return Mustache.compiler()
                 .defaultValue("")
