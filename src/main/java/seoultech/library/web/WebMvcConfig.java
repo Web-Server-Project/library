@@ -25,16 +25,18 @@ public class WebMvcConfig implements WebMvcConfigurer {
                 .addResourceLocations(CLASSPATH_RESOURCE_LOCATIONS);
     }
     @Bean
-    public Mustache.Compiler mustacheCompiler(Mustache.TemplateLoader mustacheTemplateLoader, Environment environment) {
-//        MustacheEnvironmentCollector collector = new MustacheEnvironmentCollector();
+    public Mustache.Compiler mustacheCompiler(Mustache.TemplateLoader mustacheTemplateLoader,Environment environment){
+//        MustacheEnvironmentCollector collector = new MustacheEnrionmentCollector();
 //        collector.setEnvironment(environment);
         return Mustache.compiler()
                 .defaultValue("")
-                .withDelims("{* *")
+                .withDelims("{* *}")
                 .withLoader(mustacheTemplateLoader);
-
+//                .withCollector();
     }
 }
+
+
 
 
 
