@@ -1,6 +1,6 @@
 package seoultech.library.controller;
 
-import jakarta.servlet.http.HttpServletResponse;
+//import jakarta.servlet.http.HttpServletResponse;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -11,6 +11,7 @@ import seoultech.library.model.BookItemRepository;
 import seoultech.library.service.BookItemService;
 import seoultech.library.service.UserService;
 
+import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.util.Map;
 

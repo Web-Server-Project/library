@@ -1,9 +1,10 @@
 package seoultech.library.service;
 
-import jakarta.transaction.Transactional;
+//import jakarta.transaction.Transactional;
 import org.springframework.stereotype.Service;
 import seoultech.library.model.*;
 
+import javax.transaction.Transactional;
 import java.math.BigDecimal;
 import java.time.LocalDate;
 import java.time.temporal.ChronoUnit;
@@ -43,6 +44,7 @@ public class CheckOutServiceImpl implements CheckOutService{
 
         BookItem bookItem = bookItemRepository.findByCallNumber(callNumber);
         bookItem.setStatus(BookStatus.AVAILABLE);
+
         bookItemRepository.save(bookItem);
 
         CheckOut checkOut = checkOutRepository.findTopByBookItem_Id(bookItem.getId());

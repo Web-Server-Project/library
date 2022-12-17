@@ -1,6 +1,6 @@
 package seoultech.library.web.security;
 
-import jakarta.transaction.Transactional;
+//import jakarta.transaction.Transactional;
 
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;
@@ -11,6 +11,7 @@ import seoultech.library.model.Role;
 import seoultech.library.model.User;
 import seoultech.library.service.UserService;
 
+import javax.transaction.Transactional;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;

@@ -1,7 +1,8 @@
 package seoultech.library.model;
 
-import jakarta.persistence.*;
+//import jakarta.persistence.*;
 
+import javax.persistence.*;
 import java.time.OffsetDateTime;
 import java.util.List;
 import java.util.Objects;
