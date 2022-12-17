@@ -9,7 +9,7 @@ spring :
 
   mustache:
     enabled: true
-    prefix: classpath:/templates/
+    pefix: classpath:/templates/
     request-context-attribute: requestContext
     suffix: .html
 

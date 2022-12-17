@@ -2,9 +2,10 @@ package seoultech.library.model;
 
 import com.google.common.base.Objects;
 import com.google.common.base.Strings;
-import jakarta.persistence.*;
+//import jakarta.persistence.*;
 import org.springframework.util.Assert;
 
+import javax.persistence.*;
 import java.time.OffsetDateTime;
 import java.util.Set;
 

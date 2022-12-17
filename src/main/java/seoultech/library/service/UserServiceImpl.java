@@ -1,11 +1,12 @@
 package seoultech.library.service;
 
-import jakarta.transaction.Transactional;
+//import jakarta.transaction.Transactional;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 import seoultech.library.model.User;
 import seoultech.library.model.UserRepository;
 
+import javax.transaction.Transactional;
 import java.time.OffsetDateTime;
 import java.util.Optional;
 

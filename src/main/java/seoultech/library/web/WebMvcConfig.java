@@ -2,6 +2,7 @@ package seoultech.library.web;
 
 import org.springframework.boot.autoconfigure.mustache.MustacheAutoConfiguration;
 import com.samskivert.mustache.Mustache;
+import org.springframework.boot.autoconfigure.mustache.MustacheEnvironmentCollector;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.core.env.Environment;
@@ -14,7 +15,7 @@ import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
 @Configuration
 public class WebMvcConfig implements WebMvcConfigurer {
 
-    private static final String[] CLASSPATH_RESOURCE_LOCATIONS = {
+    private static final String[ ] CLASSPATH_RESOURCE_LOCATIONS = {
             "classpath:/META-INF/resources/", "classpath:/resources/",
             "classpath:/static/", "classpath:/public/"};
 
@@ -26,13 +27,13 @@ public class WebMvcConfig implements WebMvcConfigurer {
     }
     @Bean
     public Mustache.Compiler mustacheCompiler(Mustache.TemplateLoader mustacheTemplateLoader,Environment environment){
-//        MustacheEnvironmentCollector collector = new MustacheEnrionmentCollector();
-//        collector.setEnvironment(environment);
+        MustacheEnvironmentCollector collector = new MustacheEnvironmentCollector();
+        collector.setEnvironment(environment);
         return Mustache.compiler()
                 .defaultValue("")
                 .withDelims("{* *}")
-                .withLoader(mustacheTemplateLoader);
-//                .withCollector();
+                .withLoader(mustacheTemplateLoader)
+                .withCollector(collector);
     }
 }
 

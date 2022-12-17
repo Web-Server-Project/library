@@ -1,11 +1,12 @@
 package seoultech.library.service;
 
-import jakarta.transaction.Transactional;
+//import jakarta.transaction.Transactional;
 import org.springframework.stereotype.Service;
 import seoultech.library.model.Author;
 import seoultech.library.model.AuthorRepository;
 import seoultech.library.model.User;
 
+import javax.transaction.Transactional;
 import java.util.Optional;
 
 @Service

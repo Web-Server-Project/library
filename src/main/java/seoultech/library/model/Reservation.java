@@ -1,8 +1,9 @@
 package seoultech.library.model;
 
 import com.google.common.base.Objects;
-import jakarta.persistence.*;
+//import jakarta.persistence.*;
 
+import javax.persistence.*;
 import java.time.OffsetDateTime;
 
 @Entity
